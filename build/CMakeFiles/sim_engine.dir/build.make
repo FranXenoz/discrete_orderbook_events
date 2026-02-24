@@ -72,24 +72,10 @@ include CMakeFiles/sim_engine.dir/flags.make
 CMakeFiles/sim_engine.dir/codegen:
 .PHONY : CMakeFiles/sim_engine.dir/codegen
 
-CMakeFiles/sim_engine.dir/src/engine.cpp.o: CMakeFiles/sim_engine.dir/flags.make
-CMakeFiles/sim_engine.dir/src/engine.cpp.o: /Users/franxenoz/Desktop/codes/quant_sim/src/engine.cpp
-CMakeFiles/sim_engine.dir/src/engine.cpp.o: CMakeFiles/sim_engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/franxenoz/Desktop/codes/quant_sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/sim_engine.dir/src/engine.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sim_engine.dir/src/engine.cpp.o -MF CMakeFiles/sim_engine.dir/src/engine.cpp.o.d -o CMakeFiles/sim_engine.dir/src/engine.cpp.o -c /Users/franxenoz/Desktop/codes/quant_sim/src/engine.cpp
-
-CMakeFiles/sim_engine.dir/src/engine.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sim_engine.dir/src/engine.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/franxenoz/Desktop/codes/quant_sim/src/engine.cpp > CMakeFiles/sim_engine.dir/src/engine.cpp.i
-
-CMakeFiles/sim_engine.dir/src/engine.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sim_engine.dir/src/engine.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/franxenoz/Desktop/codes/quant_sim/src/engine.cpp -o CMakeFiles/sim_engine.dir/src/engine.cpp.s
-
 CMakeFiles/sim_engine.dir/src/main.cpp.o: CMakeFiles/sim_engine.dir/flags.make
 CMakeFiles/sim_engine.dir/src/main.cpp.o: /Users/franxenoz/Desktop/codes/quant_sim/src/main.cpp
 CMakeFiles/sim_engine.dir/src/main.cpp.o: CMakeFiles/sim_engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/franxenoz/Desktop/codes/quant_sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/sim_engine.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/franxenoz/Desktop/codes/quant_sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/sim_engine.dir/src/main.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sim_engine.dir/src/main.cpp.o -MF CMakeFiles/sim_engine.dir/src/main.cpp.o.d -o CMakeFiles/sim_engine.dir/src/main.cpp.o -c /Users/franxenoz/Desktop/codes/quant_sim/src/main.cpp
 
 CMakeFiles/sim_engine.dir/src/main.cpp.i: cmake_force
@@ -100,19 +86,49 @@ CMakeFiles/sim_engine.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sim_engine.dir/src/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/franxenoz/Desktop/codes/quant_sim/src/main.cpp -o CMakeFiles/sim_engine.dir/src/main.cpp.s
 
+CMakeFiles/sim_engine.dir/src/engine.cpp.o: CMakeFiles/sim_engine.dir/flags.make
+CMakeFiles/sim_engine.dir/src/engine.cpp.o: /Users/franxenoz/Desktop/codes/quant_sim/src/engine.cpp
+CMakeFiles/sim_engine.dir/src/engine.cpp.o: CMakeFiles/sim_engine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/franxenoz/Desktop/codes/quant_sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/sim_engine.dir/src/engine.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sim_engine.dir/src/engine.cpp.o -MF CMakeFiles/sim_engine.dir/src/engine.cpp.o.d -o CMakeFiles/sim_engine.dir/src/engine.cpp.o -c /Users/franxenoz/Desktop/codes/quant_sim/src/engine.cpp
+
+CMakeFiles/sim_engine.dir/src/engine.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sim_engine.dir/src/engine.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/franxenoz/Desktop/codes/quant_sim/src/engine.cpp > CMakeFiles/sim_engine.dir/src/engine.cpp.i
+
+CMakeFiles/sim_engine.dir/src/engine.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sim_engine.dir/src/engine.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/franxenoz/Desktop/codes/quant_sim/src/engine.cpp -o CMakeFiles/sim_engine.dir/src/engine.cpp.s
+
+CMakeFiles/sim_engine.dir/src/order_book.cpp.o: CMakeFiles/sim_engine.dir/flags.make
+CMakeFiles/sim_engine.dir/src/order_book.cpp.o: /Users/franxenoz/Desktop/codes/quant_sim/src/order_book.cpp
+CMakeFiles/sim_engine.dir/src/order_book.cpp.o: CMakeFiles/sim_engine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/franxenoz/Desktop/codes/quant_sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/sim_engine.dir/src/order_book.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sim_engine.dir/src/order_book.cpp.o -MF CMakeFiles/sim_engine.dir/src/order_book.cpp.o.d -o CMakeFiles/sim_engine.dir/src/order_book.cpp.o -c /Users/franxenoz/Desktop/codes/quant_sim/src/order_book.cpp
+
+CMakeFiles/sim_engine.dir/src/order_book.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sim_engine.dir/src/order_book.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/franxenoz/Desktop/codes/quant_sim/src/order_book.cpp > CMakeFiles/sim_engine.dir/src/order_book.cpp.i
+
+CMakeFiles/sim_engine.dir/src/order_book.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sim_engine.dir/src/order_book.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/franxenoz/Desktop/codes/quant_sim/src/order_book.cpp -o CMakeFiles/sim_engine.dir/src/order_book.cpp.s
+
 # Object files for target sim_engine
 sim_engine_OBJECTS = \
+"CMakeFiles/sim_engine.dir/src/main.cpp.o" \
 "CMakeFiles/sim_engine.dir/src/engine.cpp.o" \
-"CMakeFiles/sim_engine.dir/src/main.cpp.o"
+"CMakeFiles/sim_engine.dir/src/order_book.cpp.o"
 
 # External object files for target sim_engine
 sim_engine_EXTERNAL_OBJECTS =
 
-sim_engine: CMakeFiles/sim_engine.dir/src/engine.cpp.o
 sim_engine: CMakeFiles/sim_engine.dir/src/main.cpp.o
+sim_engine: CMakeFiles/sim_engine.dir/src/engine.cpp.o
+sim_engine: CMakeFiles/sim_engine.dir/src/order_book.cpp.o
 sim_engine: CMakeFiles/sim_engine.dir/build.make
 sim_engine: CMakeFiles/sim_engine.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/franxenoz/Desktop/codes/quant_sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable sim_engine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/franxenoz/Desktop/codes/quant_sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable sim_engine"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sim_engine.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

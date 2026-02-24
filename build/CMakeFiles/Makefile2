@@ -64,10 +64,12 @@ CMAKE_BINARY_DIR = /Users/franxenoz/Desktop/codes/quant_sim/build
 
 # The main recursive "all" target.
 all: CMakeFiles/sim_engine.dir/all
+all: CMakeFiles/generate_data.dir/all
 .PHONY : all
 
 # The main recursive "codegen" target.
 codegen: CMakeFiles/sim_engine.dir/codegen
+codegen: CMakeFiles/generate_data.dir/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
@@ -76,6 +78,7 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/sim_engine.dir/clean
+clean: CMakeFiles/generate_data.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -85,12 +88,12 @@ clean: CMakeFiles/sim_engine.dir/clean
 CMakeFiles/sim_engine.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sim_engine.dir/build.make CMakeFiles/sim_engine.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sim_engine.dir/build.make CMakeFiles/sim_engine.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/franxenoz/Desktop/codes/quant_sim/build/CMakeFiles --progress-num=1,2,3 "Built target sim_engine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/franxenoz/Desktop/codes/quant_sim/build/CMakeFiles --progress-num=3,4,5,6 "Built target sim_engine"
 .PHONY : CMakeFiles/sim_engine.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/sim_engine.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/franxenoz/Desktop/codes/quant_sim/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/franxenoz/Desktop/codes/quant_sim/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/sim_engine.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/franxenoz/Desktop/codes/quant_sim/build/CMakeFiles 0
 .PHONY : CMakeFiles/sim_engine.dir/rule
@@ -102,13 +105,45 @@ sim_engine: CMakeFiles/sim_engine.dir/rule
 # codegen rule for target.
 CMakeFiles/sim_engine.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sim_engine.dir/build.make CMakeFiles/sim_engine.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/franxenoz/Desktop/codes/quant_sim/build/CMakeFiles --progress-num=1,2,3 "Finished codegen for target sim_engine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/franxenoz/Desktop/codes/quant_sim/build/CMakeFiles --progress-num=3,4,5,6 "Finished codegen for target sim_engine"
 .PHONY : CMakeFiles/sim_engine.dir/codegen
 
 # clean rule for target.
 CMakeFiles/sim_engine.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sim_engine.dir/build.make CMakeFiles/sim_engine.dir/clean
 .PHONY : CMakeFiles/sim_engine.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/generate_data.dir
+
+# All Build rule for target.
+CMakeFiles/generate_data.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/generate_data.dir/build.make CMakeFiles/generate_data.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/generate_data.dir/build.make CMakeFiles/generate_data.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/franxenoz/Desktop/codes/quant_sim/build/CMakeFiles --progress-num=1,2 "Built target generate_data"
+.PHONY : CMakeFiles/generate_data.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/generate_data.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/franxenoz/Desktop/codes/quant_sim/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/generate_data.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/franxenoz/Desktop/codes/quant_sim/build/CMakeFiles 0
+.PHONY : CMakeFiles/generate_data.dir/rule
+
+# Convenience name for target.
+generate_data: CMakeFiles/generate_data.dir/rule
+.PHONY : generate_data
+
+# codegen rule for target.
+CMakeFiles/generate_data.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/generate_data.dir/build.make CMakeFiles/generate_data.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/franxenoz/Desktop/codes/quant_sim/build/CMakeFiles --progress-num=1,2 "Finished codegen for target generate_data"
+.PHONY : CMakeFiles/generate_data.dir/codegen
+
+# clean rule for target.
+CMakeFiles/generate_data.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/generate_data.dir/build.make CMakeFiles/generate_data.dir/clean
+.PHONY : CMakeFiles/generate_data.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

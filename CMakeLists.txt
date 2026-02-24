@@ -1,18 +1,22 @@
 cmake_minimum_required(VERSION 3.10)
 project(QuantSim)
 
-# Use C++20 for performance features like '[[likely]]' and 'std::span'
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# 1. Include the 'include' directory so the compiler can find engine.hpp
+if(NOT CMAKE_BUILD_TYPE)
+    set(CMAKE_BUILD_TYPE Release)
+endif()
+
+# Apple Silicon Optimizations
+set(CMAKE_CXX_FLAGS_RELEASE "-O3 -march=native")
+
 include_directories(include)
 
-# 2. Gather all source files
-file(GLOB SOURCES "src/*.cpp")
+# --- EXECUTABLE 1: The Simulator ---
+# We explicitly list the files that belong to the engine
+add_executable(sim_engine src/main.cpp src/engine.cpp src/order_book.cpp)
 
-# 3. Create the executable named 'sim_engine'
-add_executable(sim_engine ${SOURCES})
-
-# 4. Optional: Enable optimizations for 'Release' builds
-set(CMAKE_CXX_FLAGS_RELEASE "-O3 -march=native")
+# --- EXECUTABLE 2: The Data Generator ---
+# We create a completely separate program just for generating data
+add_executable(generate_data src/generate_data.cpp)

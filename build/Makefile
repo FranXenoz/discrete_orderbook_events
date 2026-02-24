@@ -129,6 +129,19 @@ sim_engine/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sim_engine.dir/build.make CMakeFiles/sim_engine.dir/build
 .PHONY : sim_engine/fast
 
+#=============================================================================
+# Target rules for targets named generate_data
+
+# Build rule for target.
+generate_data: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 generate_data
+.PHONY : generate_data
+
+# fast build rule for target.
+generate_data/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/generate_data.dir/build.make CMakeFiles/generate_data.dir/build
+.PHONY : generate_data/fast
+
 src/engine.o: src/engine.cpp.o
 .PHONY : src/engine.o
 
@@ -152,6 +165,30 @@ src/engine.s: src/engine.cpp.s
 src/engine.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sim_engine.dir/build.make CMakeFiles/sim_engine.dir/src/engine.cpp.s
 .PHONY : src/engine.cpp.s
+
+src/generate_data.o: src/generate_data.cpp.o
+.PHONY : src/generate_data.o
+
+# target to build an object file
+src/generate_data.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/generate_data.dir/build.make CMakeFiles/generate_data.dir/src/generate_data.cpp.o
+.PHONY : src/generate_data.cpp.o
+
+src/generate_data.i: src/generate_data.cpp.i
+.PHONY : src/generate_data.i
+
+# target to preprocess a source file
+src/generate_data.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/generate_data.dir/build.make CMakeFiles/generate_data.dir/src/generate_data.cpp.i
+.PHONY : src/generate_data.cpp.i
+
+src/generate_data.s: src/generate_data.cpp.s
+.PHONY : src/generate_data.s
+
+# target to generate assembly for a file
+src/generate_data.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/generate_data.dir/build.make CMakeFiles/generate_data.dir/src/generate_data.cpp.s
+.PHONY : src/generate_data.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -177,6 +214,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sim_engine.dir/build.make CMakeFiles/sim_engine.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/order_book.o: src/order_book.cpp.o
+.PHONY : src/order_book.o
+
+# target to build an object file
+src/order_book.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sim_engine.dir/build.make CMakeFiles/sim_engine.dir/src/order_book.cpp.o
+.PHONY : src/order_book.cpp.o
+
+src/order_book.i: src/order_book.cpp.i
+.PHONY : src/order_book.i
+
+# target to preprocess a source file
+src/order_book.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sim_engine.dir/build.make CMakeFiles/sim_engine.dir/src/order_book.cpp.i
+.PHONY : src/order_book.cpp.i
+
+src/order_book.s: src/order_book.cpp.s
+.PHONY : src/order_book.s
+
+# target to generate assembly for a file
+src/order_book.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sim_engine.dir/build.make CMakeFiles/sim_engine.dir/src/order_book.cpp.s
+.PHONY : src/order_book.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -185,13 +246,20 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... generate_data"
 	@echo "... sim_engine"
 	@echo "... src/engine.o"
 	@echo "... src/engine.i"
 	@echo "... src/engine.s"
+	@echo "... src/generate_data.o"
+	@echo "... src/generate_data.i"
+	@echo "... src/generate_data.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/order_book.o"
+	@echo "... src/order_book.i"
+	@echo "... src/order_book.s"
 .PHONY : help
 
 

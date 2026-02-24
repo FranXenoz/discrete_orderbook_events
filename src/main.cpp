@@ -1,38 +1,75 @@
 #include "engine.hpp"
 #include "order_book.hpp"
 #include <iostream>
+#include <fstream>
+#include <sstream>
+#include <string>
+#include <chrono>
+
+// Function to read CSV and load events into the engine
+void load_market_data(const std::string& filename, Engine& sim, OrderBook& ob) {
+    std::ifstream file(filename);
+    if (!file.is_open()) {
+        std::cerr << "Error: Could not open file " << filename << std::endl;
+        return;
+    }
+
+    std::string line;
+    int event_count = 0;
+
+    // Read file line by line
+    while (std::getline(file, line)) {
+        std::stringstream ss(line);
+        std::string token;
+
+        // Parse CSV columns
+        std::getline(ss, token, ',');
+        double timestamp = std::stod(token);
+
+        std::getline(ss, token, ',');
+        bool is_buy = (token == "B");
+
+        std::getline(ss, token, ',');
+        double price = std::stod(token);
+
+        std::getline(ss, token, ',');
+        int quantity = std::stoi(token);
+
+        // Dynamically schedule the event in the simulator
+        sim.add_event(timestamp, [&ob, price, quantity, is_buy, timestamp]() {
+            std::string side = is_buy ? "Bid" : "Ask";
+            //std::cout << "[Time " << timestamp << "] Market " << side << ": " << quantity << " @ $" << price << "\n";
+            
+            ob.limit_order(price, quantity, is_buy);
+        });
+        
+        event_count++;
+    }
+    
+    //std::cout << "Loaded " << event_count << " events from " << filename << "\n\n";
+}
 
 int main() {
     Engine sim;
-    OrderBook ob; // This is our market state
+    OrderBook ob;
 
-    // Event 1: Alice places a buy order at time 1.0
-    // Notice the [&ob] - this is a "capture by reference". 
-    // It lets the event modify our actual OrderBook, not a copy.
-    sim.add_event(1.0, [&ob]() {
-        std::cout << "[Time 1.0] Alice places Bid: 10 shares @ $150.00\n";
-        ob.limit_order(150.00, 10, true);
-    });
+    load_market_data("../data/stress_test.csv", sim, ob);
 
-    // Event 2: Bob places a sell order at time 2.5
-    sim.add_event(2.5, [&ob]() {
-        std::cout << "[Time 2.5] Bob places Ask: 5 shares @ $151.00\n";
-        ob.limit_order(151.00, 5, false);
-    });
+    // 1. Start the clock
+    auto start_time = std::chrono::high_resolution_clock::now();
 
-    // Event 3: Charlie places another buy order at time 3.0
-    sim.add_event(3.0, [&ob]() {
-        std::cout << "[Time 3.0] Charlie places Bid: 20 shares @ $149.50\n";
-        ob.limit_order(149.50, 20, true);
-    });
-
-    // Event 4: Print the final state of the book at time 4.0
-    sim.add_event(4.0, [&ob]() {
-        ob.print();
-    });
-
-    // Start the time machine!
+    // 2. Run the engine
     sim.run();
+
+    // 3. Stop the clock
+    auto end_time = std::chrono::high_resolution_clock::now();
+
+    // 4. Calculate duration in microseconds
+    auto duration = std::chrono::duration_cast<std::chrono::microseconds>(end_time - start_time).count();
+
+    std::cout << "\n========================================\n";
+    std::cout << "Engine processed events in: " << duration << " microseconds.\n";
+    std::cout << "========================================\n";
 
     return 0;
 }

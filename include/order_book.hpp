@@ -14,7 +14,7 @@ public:
                 int available_qty = best_ask->second;
 
                 int trade_qty = std::min(quantity, available_qty);
-                std::cout << ">>> TRADE EXECUTED: " << trade_qty << " shares @ $" << trade_price << " <<<\n";
+                //std::cout << ">>> TRADE EXECUTED: " << trade_qty << " shares @ $" << trade_price << " <<<\n";
 
                 quantity -= trade_qty;
                 best_ask->second -= trade_qty;
@@ -39,7 +39,7 @@ public:
                 int available_qty = best_bid->second;
 
                 int trade_qty = std::min(quantity, available_qty);
-                std::cout << ">>> TRADE EXECUTED: " << trade_qty << " shares @ $" << trade_price << " <<<\n";
+                //std::cout << ">>> TRADE EXECUTED: " << trade_qty << " shares @ $" << trade_price << " <<<\n";
 
                 quantity -= trade_qty;
                 best_bid->second -= trade_qty;
@@ -55,7 +55,7 @@ public:
         }
     }
 
-    void print() const {
+    /*void print() const {
         std::cout << "\n--- Order Book Status ---" << std::endl;
         std::cout << "Asks (Sells):" << std::endl;
         for (auto it = asks.rbegin(); it != asks.rend(); ++it) {
@@ -66,7 +66,7 @@ public:
             std::cout << "  " << it->first << " : " << it->second << std::endl;
         }
         std::cout << "-------------------------\n" << std::endl;
-    }
+    }*/
 
 private:
     std::map<double, int> bids; 
