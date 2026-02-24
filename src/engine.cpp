@@ -1,5 +1,3 @@
-#include<iostream>
-
 #include "engine.hpp"
 
 void Engine::run() {
@@ -36,8 +34,4 @@ void Engine::run() {
     }
 
     std::cout << "--- Simulation Finished at Time: " << current_time << " ---" << std::endl;
-}
-
-signed main(){
-  cout<<"Hello, my first project!";
 }
